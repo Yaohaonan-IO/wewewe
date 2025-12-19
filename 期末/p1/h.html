@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>校园服务中心</title>
+    <!-- 确保CSS文件和HTML在同一目录 -->
+    <link rel="stylesheet" href="c.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">校园服务中心</div>
+            <div class="school-info">
+                <div class="school-chinese">
+                    <a href="https://www.hbsi.edu.cn/" target="_blank" class="school-link">河北软件职业技术学院</a>
+                    ×
+                    <a href="http://fpzjzx.com.cn/" target="_blank" class="school-link">阜平职业教育中心</a>
+                </div>
+                <div class="school-english">
+                    <a href="https://www.hbsi.edu.cn/" target="_blank" class="school-link">Hebei Software Institute</a>
+                    ×
+                    <a href="http://fpzjzx.com.cn/" target="_blank" class="school-link">Fuping Vocational Education Center</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区（统一容器） -->
+    <div class="container main-content" style="padding-top: 70px; padding-bottom: 70px;">
+        <!-- 1. 首页 -->
+        <div id="homePage" class="page">
+            <!-- 轮播图 -->
+            <div class="banner">
+                <div class="banner-wrapper">
+                    <div class="banner-item"><img src="../图/校园服务网站开发 (3).png" alt="图片1"></div>
+                    <div class="banner-item"><img src="../图/生成电动车宣传图 (2).png" alt="图片2"></div>
+                    <div class="banner-item"><img src="../图/校园服务网站开发 (9).png" alt="图片3"></div>
+                </div>
+                <div class="banner-dots">
+                    <div class="banner-dot active" data-index="0"></div>
+                    <div class="banner-dot" data-index="1"></div>
+                    <div class="banner-dot" data-index="2"></div>
+                </div>
+            </div>
+
+            <!-- 功能入口 -->
+            <div class="function-grid">
+                <a href="javascript:switchPage('foodPage')" class="function-item">
+                    <i class="fas fa-utensils function-icon"></i>
+                    <span class="function-name">校园外卖</span>
+                </a>
+                <a href="javascript:switchPage('errandPage')" class="function-item">
+                    <i class="fas fa-running function-icon"></i>
+                    <span class="function-name">校园跑腿</span>
+                </a>
+                <a href="javascript:switchPage('secondPage')" class="function-item">
+                    <i class="fas fa-shopping-bag function-icon"></i>
+                    <span class="function-name">二手交易</span>
+                </a>
+                <a href="javascript:switchPage('studyPage')" class="function-item">
+                    <i class="fas fa-book function-icon"></i>
+                    <span class="function-name">学术讨论</span>
+                </a>
+                <a href="javascript:switchPage('infoPage')" class="function-item">
+                    <i class="fas fa-bullhorn function-icon"></i>
+                    <span class="function-name">信息发布</span>
+                </a>
+                <a href="javascript:switchPage('profilePage')" class="function-item">
+                    <i class="fas fa-user function-icon"></i>
+                    <span class="function-name">个人中心</span>
+                </a>
+                <a href="javascript:switchPage('loginPage')" class="function-item">
+                    <i class="fas fa-sign-in-alt function-icon"></i>
+                    <span class="function-name">登录/注册</span>
+                </a>
+            </div>
+
+            <!-- 两栏布局 -->
+            <div class="main-grid">
+                <div class="left-content">
+                    <div class="module">
+                        <div class="module-title">热门推荐</div>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <div class="service-img"><img src="../图/奶茶.png" alt="奶茶"></div>
+                                <div class="service-info">
+                                    <div>
+                                        <div class="service-title">校园奶茶店</div>
+                                        <div class="service-desc">新品上市，第二杯半价</div>
+                                    </div>
+                                    <div class="service-price">¥8.8起</div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-img"><img src="../图/占座.png" alt="图书馆占座"></div>
+                                <div class="service-info">
+                                    <div>
+                                        <div class="service-title">图书馆占座</div>
+                                        <div class="service-desc">快速占位，价格实惠</div>
+                                    </div>
+                                    <div class="service-price">¥5/次</div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-img"><img src="../图/电脑笔记本.png" alt="二手笔记本"></div>
+                                <div class="service-info">
+                                    <div>
+                                        <div class="service-title">九成新笔记本</div>
+                                        <div class="service-desc">使用半年，功能完好</div>
+                                    </div>
+                                    <div class="service-price">¥3000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="module">
+                        <div class="module-title">最新资讯</div>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <div class="service-img"><img src="../图/社团.png" alt="社团活动"></div>
+                                <div class="service-info">
+                                    <div>
+                                        <div class="service-title">社团招新季</div>
+                                        <div class="service-desc">多个社团正在招新，快来加入吧</div>
+                                    </div>
+                                    <div style="color: #999; font-size: 12px;">刚刚更新</div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-img"><img src="../图/兼职.png" alt="兼职信息"></div>
+                                <div class="service-info">
+                                    <div>
+                                        <div class="service-title">校内兼职信息</div>
+                                        <div class="service-desc">图书馆、实验室助理招聘中</div>
+                                    </div>
+                                    <div style="color: #999; font-size: 12px;">10分钟前</div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-img"><img src="../图/四六级.png" alt="考试信息"></div>
+                                <div class="service-info">
+                                    <div>
+                                        <div class="service-title">四六级考试报名</div>
+                                        <div class="service-desc">2024年上半年四六级考试开始报名</div>
+                                    </div>
+                                    <div style="color: #999; font-size: 12px;">1小时前</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 登录页面 -->
+        <div id="loginPage" class="page hidden">
+            <div class="login-page">
+                <div class="login-form">
+                    <h2 style="text-align: center; margin-bottom: 20px; color: #4CAF50;">用户登录</h2>
+                    <div class="form-group">
+                        <label class="form-label" for="username">用户名</label>
+                        <input type="text" id="username" class="form-input" placeholder="请输入用户名">
+                        <div class="error-tip" id="usernameError">用户名不能为空，且长度不少于4位</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="password">密码</label>
+                        <input type="password" id="password" class="form-input" placeholder="请输入密码">
+                        <div class="error-tip" id="passwordError">密码不能为空，且长度不少于6位</div>
+                    </div>
+                    <button id="submitLogin" class="btn login-btn">登录</button>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <span>还没有账号？</span>
+                        <a href="javascript:void(0)" style="color: #4CAF50;">立即注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 个人中心页面 -->
+        <div id="profilePage" class="page hidden">
+            <div class="profile-page">
+                <div class="profile-header">
+                    <div class="avatar"><i class="fas fa-user"></i></div>
+                    <div class="user-info">
+                        <div class="username" id="profileUsername">未登录</div>
+                        <div style="font-size: 12px; color: #666;">点击编辑个人信息</div>
+                    </div>
+                </div>
+                <div class="profile-menu">
+                    <a href="javascript:void(0)" class="menu-item">
+                        <span><i class="fas fa-history" style="margin-right: 8px;"></i>我的订单</span>
+                        <i class="fas fa-chevron-right menu-arrow"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="menu-item">
+                        <span><i class="fas fa-wallet" style="margin-right: 8px;"></i>我的钱包</span>
+                        <i class="fas fa-chevron-right menu-arrow"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="menu-item">
+                        <span><i class="fas fa-heart" style="margin-right: 8px;"></i>我的收藏</span>
+                        <i class="fas fa-chevron-right menu-arrow"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="menu-item">
+                        <span><i class="fas fa-cog" style="margin-right: 8px;"></i>设置</span>
+                        <i class="fas fa-chevron-right menu-arrow"></i>
+                    </a>
+                    <a href="javascript:logout()" class="menu-item">
+                        <span><i class="fas fa-sign-out-alt" style="margin-right: 8px;"></i>退出登录</span>
+                        <i class="fas fa-chevron-right menu-arrow"></i>
+                    </a>
+                </div>
+                <div class="module">
+                    <div class="module-title">我的发布</div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/书.png" alt="物理教材"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">二手教材转让</div>
+                                    <div class="service-desc">大学物理教材，几乎全新</div>
+                                </div>
+                                <div class="service-price">¥20</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 校园外卖页面 -->
+        <div id="foodPage" class="page hidden">
+            <div class="service-page">
+                <div class="module">
+                    <div class="module-title">校园外卖</div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/行焖鸡.png" alt="外卖"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">黄焖鸡米饭</div>
+                                    <div class="service-desc">大份黄焖鸡，送饮料</div>
+                                </div>
+                                <div class="service-price">¥18.8</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/烤肉拌饭.png" alt="烤肉拌饭"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">烤肉拌饭</div>
+                                    <div class="service-desc">招牌烤肉饭，加煎蛋</div>
+                                </div>
+                                <div class="service-price">¥15.8</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/奶茶.png" alt="麻辣烫"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">麻辣烫</div>
+                                    <div class="service-desc">荤素搭配，营养美味</div>
+                                </div>
+                                <div class="service-price">¥12.8</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 校园跑腿页面 -->
+        <div id="errandPage" class="page hidden">
+            <div class="service-page">
+                <div class="module">
+                    <div class="module-title">校园跑腿</div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-img"><img src="https://picsum.photos/80/80?random=40" alt="取快递"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">取快递</div>
+                                    <div class="service-desc">代取快递，送到宿舍楼下</div>
+                                </div>
+                                <div class="service-price">¥3/件</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/占座.png" alt="占座"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">图书馆占座</div>
+                                    <div class="service-desc">提前占座，保证有位置</div>
+                                </div>
+                                <div class="service-price">¥5/次</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/烤肉拌饭.png" alt="食堂带饭"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">食堂带饭</div>
+                                    <div class="service-desc">食堂打饭，送到宿舍</div>
+                                </div>
+                                <div class="service-price">¥2/份</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 二手交易页面 -->
+        <div id="secondPage" class="page hidden">
+            <div class="service-page">
+                <div class="module">
+                    <div class="module-title">二手交易</div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/电脑笔记本.png" alt="笔记本电脑"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">笔记本电脑</div>
+                                    <div class="service-desc">联想小新，使用1年，无维修</div>
+                                </div>
+                                <div class="service-price">¥3500</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/考研.png" alt="考研"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">考研资料</div>
+                                    <div class="service-desc">全套考研英语、政治资料</div>
+                                </div>
+                                <div class="service-price">¥80</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/自行车.png" alt="自行车"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">自行车</div>
+                                    <div class="service-desc">山地车，八成新，送锁</div>
+                                </div>
+                                <div class="service-price">¥300</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. 学术讨论页面 -->
+        <div id="studyPage" class="page hidden">
+            <div class="service-page">
+                <div class="module">
+                    <div class="module-title">学术讨论</div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/考研.png" alt="交流"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">计算机考研交流</div>
+                                    <div class="service-desc">分享考研经验，资料共享</div>
+                                </div>
+                                <div style="color: #4CAF50;">200+人参与</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/书 (2).png" alt="论文"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">毕业论文指导</div>
+                                    <div class="service-desc">论文写作技巧，查重经验</div>
+                                </div>
+                                <div style="color: #4CAF50;">150+人参与</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/四六级.png" alt="学术"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">四六级备考</div>
+                                    <div class="service-desc">听力、阅读、写作技巧分享</div>
+                                </div>
+                                <div style="color: #4CAF50;">300+人参与</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 信息发布页面 -->
+        <div id="infoPage" class="page hidden">
+            <div class="service-page">
+                <div class="module">
+                    <div class="module-title">信息发布</div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/兼职.png" alt="信息"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">校园兼职</div>
+                                    <div class="service-desc">图书馆管理员助理，时薪20元</div>
+                                </div>
+                                <div style="color: #999; font-size: 12px;">发布于1小时前</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/寻物.png" alt="信息"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">寻物启事</div>
+                                    <div class="service-desc">丢失校园卡，卡号123456，重谢</div>
+                                </div>
+                                <div style="color: #999; font-size: 12px;">发布于3小时前</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img"><img src="../图/社团.png" alt="信息"></div>
+                            <div class="service-info">
+                                <div>
+                                    <div class="service-title">社团招新</div>
+                                    <div class="service-desc">摄影社团招新，零基础可加入</div>
+                                </div>
+                                <div style="color: #999; font-size: 12px;">发布于1天前</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <nav>
+        <div class="nav-list">
+            <a href="javascript:switchPage('homePage')" class="nav-item active">
+                <i class="fas fa-home nav-icon"></i>
+                <span>首页</span>
+            </a>
+            <a href="javascript:switchPage('foodPage')" class="nav-item">
+                <i class="fas fa-utensils nav-icon"></i>
+                <span>外卖</span>
+            </a>
+            <a href="javascript:switchPage('secondPage')" class="nav-item">
+                <i class="fas fa-shopping-bag nav-icon"></i>
+                <span>二手</span>
+            </a>
+            <a href="javascript:switchPage('profilePage')" class="nav-item">
+                <i class="fas fa-user nav-icon"></i>
+                <span>我的</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- 确保JS文件和HTML在同一目录 -->
+    <script src="j.js"></script>
+</body>
+</html>
